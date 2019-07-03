@@ -12,12 +12,9 @@ var crystal1 = Math.floor((Math.random() * 12) + 1);
 var crystal2 = Math.floor((Math.random() * 12) + 1);
 var crystal3 = Math.floor((Math.random() * 12) + 1);
 var crystal4 = Math.floor((Math.random() * 12) + 1);
-console.log("1 is " +crystal1);
-console.log("2 is " +crystal2);
-console.log("3 is " +crystal3);
-console.log("4 is " +crystal4);
 
-//updating scores total, wins, and losses
+
+//updating scores totals
 var updatedScore = function() {
 	$('#wins').empty();
 	$('#wins').append(wins);
@@ -30,7 +27,7 @@ var updatedScore = function() {
 
 }
 
-//when the game restarts it should..
+//reset
 var restartGame = function() {
 	score = 0;
 	random = Math.floor((Math.random()* 100)+ 19);
@@ -48,8 +45,8 @@ var restartGame = function() {
 
 }
 
-//game process 
-var gameProcess = function() {
+//game logic
+var gameLogic = function() {
 	if(score == random) {
 		wins = wins + 1;
 		alert("You win!");
@@ -71,26 +68,26 @@ $('.random').append(random);
 $('.score').append(score);
 
 
-//adding numbers to final scores when crystals are clicked
+//adding numbers to score,. click function
 $(document).ready(function(){
 	$('#crystal1').click(function(){
  		score = score + crystal1;
- 		gameProcess();
+ 		gameLogic();
  	})
 
  	$('#crystal2').click(function(){
  		score = score + crystal2;
- 		gameProcess();
+ 		gameLogic();
  	})
 
  	$('#crystal3').click(function(){
  		score = score + crystal3;
- 		gameProcess();
+ 		gameLogic();
  	})
 
  	$('#crystal4').click(function(){
  		score = score + crystal4;
- 		gameProcess();
+ 		gameLogic();
  	})
 
 });
