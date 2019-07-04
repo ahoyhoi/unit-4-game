@@ -3,9 +3,10 @@
 
 #gameName {
 
-color: red;
+color: white;
 text-align: center;
 font-size: 50px;
+background-color: bisque;
 
 
 }
@@ -14,7 +15,13 @@ h2{
     text-align: center;
 }
 
+
+
 .click{
 
     size: 50px;
 }
+
+body {
+    background-image: url("\assets\images\GameBG.jpeg");
+  }
